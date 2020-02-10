@@ -6339,16 +6339,6 @@ try
                 $console_status_stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
             }
 
-            if($inveigh.console_input)
-            {
-
-                if([Console]::KeyAvailable)
-                {
-                    $inveigh.console_output = $false
-                    BREAK console_loop
-                }
-        
-            }
 
             Start-Sleep -m 5
         }
@@ -6751,12 +6741,6 @@ if($inveigh.tool -ne 1)
 
                 } 
 
-            }
-
-            if([Console]::KeyAvailable)
-            {
-                $inveigh.console_output = $false
-                BREAK console_loop
             }
 
             Start-Sleep -m 5
